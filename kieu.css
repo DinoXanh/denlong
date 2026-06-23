@@ -1,0 +1,76 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(#111,#333);
+    overflow:hidden;
+}
+
+.container{
+    perspective:1000px;
+}
+
+.den{
+    width:250px;
+    height:300px;
+    position:relative;
+    transform-style:preserve-3d;
+    animation:rotate 10s linear infinite;
+}
+
+.den:hover{
+    animation-play-state:paused;
+}
+
+.den span{
+    position:absolute;
+    width:220px;
+    height:280px;
+    left:15px;
+    top:10px;
+    border:3px solid white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 15px white;
+}
+
+.den span img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.den span:nth-child(1){
+    transform:rotateY(0deg) translateZ(250px);
+}
+
+.den span:nth-child(2){
+    transform:rotateY(60deg) translateZ(250px);
+}
+
+.den span:nth-child(3){
+    transform:rotateY(120deg) translateZ(250px);
+}
+
+.den span:nth-child(4){
+    transform:rotateY(180deg) translateZ(250px);
+}
+
+.den span:nth-child(5){
+    transform:rotateY(240deg) translateZ(250px);
+}
+
+.den span:nth-child(6){
+    transform:rotateY(300deg) translateZ(250px);
+}
+
+@keyframes rotate{
+    from{
+        transform:rotateY(0deg);
+    }
+    to{
+        transform:rotateY(360deg);
+    }
+}
