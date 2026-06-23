@@ -4,7 +4,10 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(#111,#333);
+    background-image:url("nen.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     overflow:hidden;
 }
 
